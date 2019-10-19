@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:waf="http://waf.codeplex.com/schemas"
+                    xmlns:converters="clr-namespace:LRS.NET.Presentation.Converters">
+	<waf:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+	<waf:ValidationErrorsConverter x:Key="ValidationErrorsConverter" />
+
+	<converters:StringToUriConverter x:Key="StringToUriConverter" />
+</ResourceDictionary>

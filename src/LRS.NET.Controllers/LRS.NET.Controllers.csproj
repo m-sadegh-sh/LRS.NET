@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33C13186-2BA0-4FF5-BDB3-7F5E619F6265}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LRS.NET.Controllers</RootNamespace>
+    <AssemblyName>LRS.NET.Controllers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0-rc1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0-rc1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WpfApplicationFramework">
+      <HintPath>..\packages\waf.3.0.0\lib\net45\WpfApplicationFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityController.cs" />
+    <Compile Include="Globalization\CityController.cs" />
+    <Compile Include="Globalization\ProvinceController.cs" />
+    <Compile Include="Globalization\CountryController.cs" />
+    <Compile Include="IEntityController.cs" />
+    <Compile Include="ShellController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LRS.NET.Core\LRS.NET.Core.csproj">
+      <Project>{453D4260-03FE-4C25-A9A8-80A1D66E9522}</Project>
+      <Name>LRS.NET.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.DataModels\LRS.NET.DataModels.csproj">
+      <Project>{4bb8084c-ffb5-4395-b146-eb4c1aede407}</Project>
+      <Name>LRS.NET.DataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.Data\LRS.NET.Data.csproj">
+      <Project>{7FFAA09D-BA34-41E3-98F3-9693376E3F3C}</Project>
+      <Name>LRS.NET.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.Resources\LRS.NET.Resources.csproj">
+      <Project>{49DB9ECE-1DF8-4F1B-B502-4DBC679FCC7B}</Project>
+      <Name>LRS.NET.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.Services\LRS.NET.Services.csproj">
+      <Project>{E1CA1BA4-5B6B-4453-84A9-5BCCC67ECD12}</Project>
+      <Name>LRS.NET.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.Settings\LRS.NET.Settings.csproj">
+      <Project>{3017CFF6-2F1C-4B0D-B6DE-B2700774963C}</Project>
+      <Name>LRS.NET.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.ViewModels\LRS.NET.ViewModels.csproj">
+      <Project>{f0996df9-925d-476b-b3cd-23ce7a7b2db6}</Project>
+      <Name>LRS.NET.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.View\LRS.NET.View.csproj">
+      <Project>{28D1D1C3-9E87-4249-A4A1-7072E86C0332}</Project>
+      <Name>LRS.NET.View</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

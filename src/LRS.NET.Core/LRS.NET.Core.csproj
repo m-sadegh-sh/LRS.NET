@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{453D4260-03FE-4C25-A9A8-80A1D66E9522}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LRS.NET.Core</RootNamespace>
+    <AssemblyName>LRS.NET.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="CuttingEdge.Conditions">
+      <HintPath>..\packages\CuttingEdge.Conditions.1.2.0.0\lib\NET35\CuttingEdge.Conditions.dll</HintPath>
+    </Reference>
+    <Reference Include="Dnum">
+      <HintPath>..\packages\Dnum.1.1.4252.35574\lib\net35\Dnum.dll</HintPath>
+    </Reference>
+    <Reference Include="FarsiLibrary.Utils">
+      <HintPath>..\lib\FarsiLibrary.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Inflector">
+      <HintPath>..\packages\Inflector.1.0.0.0\lib\net45\Inflector.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\packages\Quartz.2.1.2\lib\net40\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UniversalTypeConverter">
+      <HintPath>..\packages\UniversalTypeConverter.1.0.2\lib\net40\UniversalTypeConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="Utilities">
+      <HintPath>..\packages\CraigsUtilityLibrary.3.4.0020\lib\net40\Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="WpfApplicationFramework">
+      <HintPath>..\packages\waf.3.0.0\lib\net45\WpfApplicationFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DisposableBase.cs" />
+    <Compile Include="Domain\AttributeBase.cs" />
+    <Compile Include="Domain\Components\CellNumberComponent.cs" />
+    <Compile Include="Domain\Components\IComponent.cs" />
+    <Compile Include="Domain\Components\LoanLimitationsComponent.cs" />
+    <Compile Include="Domain\Components\NameComponent.cs" />
+    <Compile Include="Domain\Entities\AttributeEntityBase.cs" />
+    <Compile Include="Domain\Entities\EntityBase.cs" />
+    <Compile Include="Domain\Entities\Foundation\BankEmployee.cs" />
+    <Compile Include="Domain\Entities\Foundation\BorrowerEntity.cs" />
+    <Compile Include="Domain\Entities\Foundation\JobEntity.cs" />
+    <Compile Include="Domain\Entities\Foundation\LoanRequestStatus.cs" />
+    <Compile Include="Domain\Entities\Foundation\MarriageStatus.cs" />
+    <Compile Include="Domain\Entities\Foundation\PeopleEntityBase.cs" />
+    <Compile Include="Domain\Entities\Foundation\RequestDemandEntity.cs" />
+    <Compile Include="Domain\Entities\Foundation\RequestDemandStatus.cs" />
+    <Compile Include="Domain\Entities\Foundation\RequestDispatchingEntity.cs" />
+    <Compile Include="Domain\Entities\Foundation\RequestTrackingEntityBase.cs" />
+    <Compile Include="Domain\Entities\Foundation\SponsorshipStatus.cs" />
+    <Compile Include="Domain\Entities\Globalization\CityEntity.cs" />
+    <Compile Include="Domain\Entities\Globalization\ProvinceEntity.cs" />
+    <Compile Include="Domain\Entities\Globalization\CountryEntity.cs" />
+    <Compile Include="Domain\Entities\IEntity.cs" />
+    <Compile Include="Domain\Entities\Foundation\BankEntity.cs" />
+    <Compile Include="Domain\Entities\Foundation\BranchEntity.cs" />
+    <Compile Include="Domain\Entities\Foundation\SponsorRequestEntity.cs" />
+    <Compile Include="Domain\Entities\Foundation\RequestDispatchingResult.cs" />
+    <Compile Include="Domain\Entities\Foundation\ShiftEntity.cs" />
+    <Compile Include="Domain\Entities\Foundation\SponsorEntity.cs" />
+    <Compile Include="Domain\Entities\Foundation\LoanRequestEntity.cs" />
+    <Compile Include="Domain\Entities\Foundation\SponsorTypeEntity.cs" />
+    <Compile Include="Domain\Entities\Foundation\WorkingShiftEntity.cs" />
+    <Compile Include="Domain\Entities\Foundation\WorkingTimeEntityBase.cs" />
+    <Compile Include="Domain\Entities\Payment\FundEntity.cs" />
+    <Compile Include="Domain\Entities\Payment\OrderEntity.cs" />
+    <Compile Include="Domain\Entities\Payment\SettlementStatus.cs" />
+    <Compile Include="Domain\Entities\Payment\TransferLogEntity.cs" />
+    <Compile Include="Domain\Entities\Payment\TransferTarget.cs" />
+    <Compile Include="Domain\Entities\Scheduling\MeetingEntity.cs" />
+    <Compile Include="Domain\Entities\Security\LogEntity.cs" />
+    <Compile Include="Domain\Entities\Security\LogSeverity.cs" />
+    <Compile Include="Domain\Entities\Security\PermissionEntity.cs" />
+    <Compile Include="Domain\Entities\Security\PermissionGroupEntity.cs" />
+    <Compile Include="Domain\Entities\Security\RoleEntity.cs" />
+    <Compile Include="Domain\Entities\Security\SecurityExtensions.cs" />
+    <Compile Include="Domain\Entities\Security\UserAttributeEntity.cs" />
+    <Compile Include="Domain\Entities\Security\UserAttributes.cs" />
+    <Compile Include="Domain\Entities\Security\UserEntity.cs" />
+    <Compile Include="Domain\Entities\Workflow\QueuedSmsEntity.cs" />
+    <Compile Include="Domain\Entities\Workflow\QueuedSmsImportance.cs" />
+    <Compile Include="Domain\Entities\Workflow\SmsProviderEntity.cs" />
+    <Compile Include="Domain\Entities\Workflow\EmailProviderEntity.cs" />
+    <Compile Include="Domain\Entities\Workflow\QueuedEmailEntity.cs" />
+    <Compile Include="Domain\Entities\Workflow\QueuedEmailImportance.cs" />
+    <Compile Include="Domain\ValueResolveHelpers.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\GenericExtensions.cs" />
+    <Compile Include="Extensions\GuidExtension.cs" />
+    <Compile Include="Extensions\NameValueCollectionExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="IWorkContext.cs" />
+    <Compile Include="Jobs\IJobScheduler.cs" />
+    <Compile Include="NotSupportedEnumException.cs" />
+    <Compile Include="PatternValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="ValueAttribute.cs" />
+    <Compile Include="ValueExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LRS.NET.Build\LRS.NET.Build.csproj">
+      <Project>{369CEBA7-9C13-46C7-BE71-1103BB590B7D}</Project>
+      <Name>LRS.NET.Build</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.Resources\LRS.NET.Resources.csproj">
+      <Project>{49DB9ECE-1DF8-4F1B-B502-4DBC679FCC7B}</Project>
+      <Name>LRS.NET.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

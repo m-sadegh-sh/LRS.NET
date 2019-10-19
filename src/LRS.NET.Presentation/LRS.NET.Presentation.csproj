@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{952B4629-7EA2-4944-B800-EDBDA5600DB8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LRS.NET.Presentation</RootNamespace>
+    <AssemblyName>LRS.NET.Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Images\LrsNet.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elysium">
+      <HintPath>..\packages\Elysium.Theme.2.0.3\lib\net45\Elysium.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0-rc1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0-rc1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfApplicationFramework">
+      <HintPath>..\packages\waf.3.0.0\lib\net45\WpfApplicationFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\PresentationService.cs" />
+    <Compile Include="Views\CityListView.xaml.cs">
+      <DependentUpon>CityListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CityView.xaml.cs">
+      <DependentUpon>CityView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProvinceSelectorView.xaml.cs">
+      <DependentUpon>ProvinceSelectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CountrySelectorView.xaml.cs">
+      <DependentUpon>CountrySelectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProvinceListView.xaml.cs">
+      <DependentUpon>ProvinceListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProvinceView.xaml.cs">
+      <DependentUpon>ProvinceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CountryListView.xaml.cs">
+      <DependentUpon>CountryListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CountryView.xaml.cs">
+      <DependentUpon>CountryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellWindow.xaml.cs">
+      <DependentUpon>ShellWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Converters\StringToUriConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <Resource Include="Resources\Fonts\Yekan.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ControlResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ConverterResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ImageResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CityListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CityView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ProvinceSelectorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CountrySelectorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ProvinceListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ProvinceView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CountryListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CountryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ShellWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\LrsNet.ico" />
+    <Resource Include="Resources\Images\Copy.png" />
+    <Resource Include="Resources\Images\Cut.png" />
+    <Resource Include="Resources\Images\Delete.png" />
+    <Resource Include="Resources\Images\Email.png" />
+    <Resource Include="Resources\Images\Paste.png" />
+    <Resource Include="Resources\Images\Redo.png" />
+    <Resource Include="Resources\Images\Save.png" />
+    <Resource Include="Resources\Images\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LRS.NET.Build\LRS.NET.Build.csproj">
+      <Project>{369ceba7-9c13-46c7-be71-1103bb590b7d}</Project>
+      <Name>LRS.NET.Build</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.Controllers\LRS.NET.Controllers.csproj">
+      <Project>{33c13186-2ba0-4ff5-bdb3-7f5e619f6265}</Project>
+      <Name>LRS.NET.Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.Core\LRS.NET.Core.csproj">
+      <Project>{453d4260-03fe-4c25-a9a8-80a1d66e9522}</Project>
+      <Name>LRS.NET.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.DataModels\LRS.NET.DataModels.csproj">
+      <Project>{4bb8084c-ffb5-4395-b146-eb4c1aede407}</Project>
+      <Name>LRS.NET.DataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.Data\LRS.NET.Data.csproj">
+      <Project>{7ffaa09d-ba34-41e3-98f3-9693376e3f3c}</Project>
+      <Name>LRS.NET.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.Resources\LRS.NET.Resources.csproj">
+      <Project>{49db9ece-1df8-4f1b-b502-4dbc679fcc7b}</Project>
+      <Name>LRS.NET.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.Services\LRS.NET.Services.csproj">
+      <Project>{E1CA1BA4-5B6B-4453-84A9-5BCCC67ECD12}</Project>
+      <Name>LRS.NET.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.Settings\LRS.NET.Settings.csproj">
+      <Project>{3017cff6-2f1c-4b0d-b6de-b2700774963c}</Project>
+      <Name>LRS.NET.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.ViewModels\LRS.NET.ViewModels.csproj">
+      <Project>{f0996df9-925d-476b-b3cd-23ce7a7b2db6}</Project>
+      <Name>LRS.NET.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRS.NET.View\LRS.NET.View.csproj">
+      <Project>{28D1D1C3-9E87-4249-A4A1-7072E86C0332}</Project>
+      <Name>LRS.NET.View</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

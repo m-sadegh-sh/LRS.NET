@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="LRS.NET.Presentation.Views.CountryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:resources="clr-namespace:LRS.NET.Resources;assembly=LRS.NET.Resources"
+             Style="{StaticResource FormView}">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Border Grid.Column="0"
+		        Grid.Row="0"
+		        Style="{StaticResource LabelWrapperLastItem}">
+			<Label Content="{x:Static resources:Controls.Label_Country_Name}"
+			       Target="{Binding ElementName=NameTextBox}"
+			       Style="{StaticResource FieldLabel}" />
+		</Border>
+		<TextBox x:Name="NameTextBox"
+		         Text="{Binding Entity.Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=true, NotifyOnValidationError=true}"
+		         Grid.Column="1"
+		         Grid.Row="0"
+		         MaxLength="100"
+		         Height="37"
+		         Margin="0"
+		         HorizontalAlignment="Stretch" />
+	</Grid>
+</UserControl>

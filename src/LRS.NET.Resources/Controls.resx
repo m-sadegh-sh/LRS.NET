@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Menu_About" xml:space="preserve">
+    <value>_درباره...</value>
+  </data>
+  <data name="Menu_Add" xml:space="preserve">
+    <value>افزودن</value>
+  </data>
+  <data name="App_Title" xml:space="preserve">
+    <value>سیستم مدیریت وام</value>
+  </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>لغو</value>
+  </data>
+  <data name="Shortcut_SelectAll" xml:space="preserve">
+    <value>Ctrl+A</value>
+  </data>
+  <data name="Shortcut_Copy" xml:space="preserve">
+    <value>Ctrl+C</value>
+  </data>
+  <data name="Shortcut_Save" xml:space="preserve">
+    <value>Ctrl+S</value>
+  </data>
+  <data name="Shortcut_Paste" xml:space="preserve">
+    <value>Ctrl+V</value>
+  </data>
+  <data name="Shortcut_Cut" xml:space="preserve">
+    <value>Ctrl+X</value>
+  </data>
+  <data name="Shortcut_Redo" xml:space="preserve">
+    <value>Ctrl+Y</value>
+  </data>
+  <data name="Shortcut_Undo" xml:space="preserve">
+    <value>Ctrl+Z</value>
+  </data>
+  <data name="Button_Copy" xml:space="preserve">
+    <value>کپی</value>
+  </data>
+  <data name="Menu_Copy" xml:space="preserve">
+    <value>_کپی</value>
+  </data>
+  <data name="Button_Cut" xml:space="preserve">
+    <value>برداشتن</value>
+  </data>
+  <data name="Menu_Cut" xml:space="preserve">
+    <value>_برداشتن</value>
+  </data>
+  <data name="App_Version" xml:space="preserve">
+    <value>نسخه: {0}</value>
+  </data>
+  <data name="Menu_Data" xml:space="preserve">
+    <value>_اطلاعات</value>
+  </data>
+  <data name="Menu_Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Menu_Edit" xml:space="preserve">
+    <value>ویرایش</value>
+  </data>
+  <data name="Menu_Exit" xml:space="preserve">
+    <value>_خروج</value>
+  </data>
+  <data name="Shortcut_About" xml:space="preserve">
+    <value>F1</value>
+  </data>
+  <data name="Menu_Help" xml:space="preserve">
+    <value>_کمک</value>
+  </data>
+  <data name="Button_More" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="Button_Ok" xml:space="preserve">
+    <value>تائید</value>
+  </data>
+  <data name="Menu_Paste" xml:space="preserve">
+    <value>_چسباندن</value>
+  </data>
+  <data name="Button_Redo" xml:space="preserve">
+    <value>جلو</value>
+  </data>
+  <data name="Menu_Redo" xml:space="preserve">
+    <value>_جلو</value>
+  </data>
+  <data name="Menu_Remove" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Button_Save" xml:space="preserve">
+    <value>ذخیره</value>
+  </data>
+  <data name="Menu_Save" xml:space="preserve">
+    <value>_ذخیره</value>
+  </data>
+  <data name="Menu_Search" xml:space="preserve">
+    <value>_جستجو</value>
+  </data>
+  <data name="Menu_SelectAll" xml:space="preserve">
+    <value>_انتخاب همه</value>
+  </data>
+  <data name="Label_Country_Name" xml:space="preserve">
+    <value>_نام</value>
+  </data>
+  <data name="Undefined" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="Button_Undo" xml:space="preserve">
+    <value>عقب</value>
+  </data>
+  <data name="Menu_Undo" xml:space="preserve">
+    <value>_عقب</value>
+  </data>
+  <data name="Button_Paste" xml:space="preserve">
+    <value>چسباندن</value>
+  </data>
+  <data name="Shortcut_Delete" xml:space="preserve">
+    <value>Del</value>
+  </data>
+  <data name="Window_City" xml:space="preserve">
+    <value>شهرها</value>
+  </data>
+  <data name="Window_Country" xml:space="preserve">
+    <value>کشورها</value>
+  </data>
+  <data name="Window_Main" xml:space="preserve">
+    <value>پنجره اصلی</value>
+  </data>
+  <data name="Window_Province" xml:space="preserve">
+    <value>استان‌ها</value>
+  </data>
+  <data name="Label_Province_Country" xml:space="preserve">
+    <value>کشور</value>
+  </data>
+  <data name="Label_Province_Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Label_City_Province" xml:space="preserve">
+    <value>استان</value>
+  </data>
+  <data name="Label_City_Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Window_Country_Selector" xml:space="preserve">
+    <value>کشور مورد نظر...</value>
+  </data>
+  <data name="Window_Province_Selector" xml:space="preserve">
+    <value>استان مورد نظر...</value>
+  </data>
+</root>
